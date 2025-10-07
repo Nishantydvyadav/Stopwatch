@@ -43,7 +43,7 @@ function reset() {
   cancelAnimationFrame(animationFrame);
   startTime = 0;
   elapsed = 0;
-  document.getElementById("stopwatch").textContent = "00 : 00 : 00 : 000 : 000";
+  document.getElementById("stopwatch").textContent = "00 : 00 : 00 : 000";
 }
 
 function saveTime() {
@@ -61,6 +61,6 @@ function reset() {
   cancelAnimationFrame(animationFrame);
   startTime = 0;
   elapsed = 0;
-  document.getElementById("stopwatch").textContent = "00 : 00 : 00 : 000 : 000";
-  document.getElementById("historyList").innerHTML = ""; // clear history
+  document.getElementById("stopwatch").textContent = "00 : 00 : 00 : 000";
+  document.getElementById("historyList").innerHTML = ""; 
 }
