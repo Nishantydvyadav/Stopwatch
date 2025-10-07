@@ -5,15 +5,13 @@ let animationFrame;
 
 function formatTime(time) {
   const totalMilliseconds = Math.floor(time);
-  const microseconds = Math.floor((time % 1) * 1000);
 
   const hours = String(Math.floor(totalMilliseconds / 3600000)).padStart(2, '0');
   const minutes = String(Math.floor((totalMilliseconds % 3600000) / 60000)).padStart(2, '0');
   const seconds = String(Math.floor((totalMilliseconds % 60000) / 1000)).padStart(2, '0');
-  const milliseconds = String(Math.floor(totalMilliseconds % 1000)).padStart(3, '0');
-  const micro = String(microseconds).padStart(3, '0');
+  const milliseconds = String(totalMilliseconds % 1000).padStart(3, '0');
 
-  return `${hours} : ${minutes} : ${seconds} : ${milliseconds} : ${micro}`;
+  return `${hours} : ${minutes} : ${seconds} : ${milliseconds}`;
 }
 
 function update() {
